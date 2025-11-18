@@ -1,4 +1,4 @@
-name: Test React App
+name: Deploy Ract App
 on: push
 
 jobs:
@@ -11,3 +11,24 @@ jobs:
         run: npm install
       - name: Test application
         run: npm run test
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the repository code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Test application
+        run: npm run lint
+   build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the repository code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Build application
+        run: npm run build
+      - name: Deploy
+        run: echo Deploying...
+    
