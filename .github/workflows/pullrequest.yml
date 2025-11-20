@@ -1,4 +1,4 @@
-name: Print Pull Request Context
+name: Print Context training
 on: 
  workflow_dispatch:
  pull_request:
